@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        dd(auth()->user()->hasRole('supervisor'));
+        dd(auth()->user()->can('add-user'));
         return view('home');
     }
 }
